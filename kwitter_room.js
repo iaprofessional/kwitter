@@ -34,7 +34,7 @@ getData();
 function redirect_to_room_name(name) {
       console.log(name);
       localStorage.setItem("room_name",name);
-      window.location="kwitternextgen_page.html";
+      window.location.replace="kwitternextgen_page.html";
 }
 function logout() {
       localStorage.removeItem("user_name");
