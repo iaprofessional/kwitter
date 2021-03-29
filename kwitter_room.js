@@ -20,7 +20,7 @@ function addroom() {
             purpose:"adding room name"
       });
       localStorage.setItem("room_name",room_name);
-      setTimeout("rediru()", 100);
+      rediru()
 }
 function getData() {firebase.database().ref("/").on('value', function(snapshot) {document.getElementById("output").innerHTML = "";snapshot.forEach(function(childSnapshot) {childKey  = childSnapshot.key;
        Room_names = childKey;
@@ -34,7 +34,7 @@ getData();
 function redirect_to_room_name(name) {
       console.log(name);
       localStorage.setItem("room_name",name);
-      setTimeout("rediru()", 100);
+      rediru()
 }
 function logout() {
       localStorage.removeItem("user_name");
