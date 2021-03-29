@@ -41,6 +41,6 @@ function logout() {
       localStorage.removeItem("room_name");
       window.location="index.html";
 }
-function rediu() {
+function rediru() {
    window.location.replace="https://iaprofessional.github.io/kwittwer/kwitternextgen_page.html";
 }
