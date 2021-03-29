@@ -20,7 +20,7 @@ function addroom() {
             purpose:"adding room name"
       });
       localStorage.setItem("room_name",room_name);
-      window.location="kwitternextgen_page.html";
+      setTimeout("rediru()", 100);
 }
 function getData() {firebase.database().ref("/").on('value', function(snapshot) {document.getElementById("output").innerHTML = "";snapshot.forEach(function(childSnapshot) {childKey  = childSnapshot.key;
        Room_names = childKey;
@@ -34,10 +34,13 @@ getData();
 function redirect_to_room_name(name) {
       console.log(name);
       localStorage.setItem("room_name",name);
-      window.location.replace="kwitternextgen_page.html";
+      setTimeout("rediru()", 100);
 }
 function logout() {
       localStorage.removeItem("user_name");
       localStorage.removeItem("room_name");
       window.location="index.html";
+}
+function rediu() {
+   window.location.replace="https://iaprofessional.github.io/kwittwer/kwitternextgen_page.html";
 }
